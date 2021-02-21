@@ -7,7 +7,7 @@ class Transaction extends Component {
         transactions: []
     }
     async componentDidMount() {
-        let response = await axios.get('http://localhost:3001/transfer');
+        let response = await axios.get('https://backendbanktsf.herokuapp.com/transfer');
         console.log(response.data);
         this.setState({ transactions: response.data })
     }

@@ -12,7 +12,7 @@ class Transfer extends Component {
         amount: 0
     }
     async componentDidMount() {
-        let response = await axios.get('http://localhost:3001/user');
+        let response = await axios.get('https://backendbanktsf.herokuapp.com/user');
         console.log(response.data);
         this.setState({ users: response.data })
     }
@@ -42,7 +42,7 @@ class Transfer extends Component {
                 recieverId: this.state.recieverId,
                 amount: this.state.amount,
             }
-            axios.post(`http://localhost:3001/transfer/new`, data)
+            axios.post(`https://backendbanktsf.herokuapp.com/transfer/new`, data)
                 .then((res) => { console.log(res.data); alertService.success(res.data); })
                 .catch((err) => { console.log(err); alertService.error("Insufficent Balance"); })
         }

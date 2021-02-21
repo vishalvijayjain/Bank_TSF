@@ -8,7 +8,7 @@ class Customer extends Component {
     }
 
     async componentDidMount() {
-        let response = await axios.get('http://localhost:3001/user');
+        let response = await axios.get('https://backendbanktsf.herokuapp.com/user');
         console.log(response.data);
         this.setState({ users: response.data })
     }
