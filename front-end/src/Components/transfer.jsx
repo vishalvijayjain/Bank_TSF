@@ -51,9 +51,11 @@ class Transfer extends Component {
         return (
             <>
                 <Navbar />
-                <div className="container">
-                    <form className="col-sm-12 mt-5" onSubmit={this.transfer}>
-                        <div className="form-group col-sm-12"><label htmlFor="sender">Transfer from:</label>
+                <div className="container justify-content-center mt-5 shadow p-3 mb-5 bg-light rounded">
+                    <form className="col-sm-12 mt-5 pt-5" onSubmit={this.transfer}>
+                        <div className="container">
+                            <h2 className="text-center text-muted pb-5">Transfer Fund Window</h2>
+                        <div className="form-group col-sm-12"><label htmlFor="sender">Transfer from</label>
                             <select className="form-control  mb-4" name="sender" required value={this.state.senderId} onChange={e => this.handleSender(e)}
                             >
                                 <option value="" id="" defaultValue >Please select</option>
@@ -61,7 +63,7 @@ class Transfer extends Component {
                             </select>
                         </div>
                         <div className="form-group col-sm-12">
-                            <label htmlFor="reciever">Transfer to:</label>
+                            <label htmlFor="reciever">Transfer to</label>
                             <select className="form-control mb-4" name="reciever" required value={this.state.recieverId} onChange={e => this.handleReciever(e)}
                             >
                                 <option value="" id="" defaultValue >Please select</option>
@@ -73,8 +75,9 @@ class Transfer extends Component {
                             <input type="text" name="amount" className="form-control" id="amount" aria-describedby="amount" onChange={this.handleAmount} />
 
                         </div>
-                        <div className="col-sm-12 d-flex justify-content-end reply-button">
-                            <button type="submit" className="btn btn-primary mb-3">Transfer</button>
+                        <div className="col-sm-12 d-flex justify-content-center reply-button">
+                            <button type="submit" className="btn btn-success mb-3">Transfer</button>
+                        </div>
                         </div>
                     </form>
                 </div>

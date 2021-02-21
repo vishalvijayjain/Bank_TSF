@@ -19,11 +19,7 @@ class Customer extends Component {
         return (
             <>
                 <Navbar />
-                <div className="container">
-                    {/* <div className="col-sm-3 text-center">
-                        <p>+</p>
-                        <p>Add New</p>
-                    </div> */}
+                <div className="container py-5 shadow-lg p-3 mt-5 px-5 bg-light rounded  bg-info">
 
                     {Users.map(user => (
 
@@ -34,7 +30,13 @@ class Customer extends Component {
                             <div className="col-sm-2 user-value">{user.balance}</div>
                         </div>
                     ))}
+                    
                 </div>
+                    <>
+                        <br/>
+                        <hr/>
+                        <p className="text-center text-info">Created by Vishal Jain as a TSF task. Check out my <a href="https://github.com/vishalvijayjain/Doodles" target="_blank">Github</a></p>
+                    </>
             </>
         );
     }
