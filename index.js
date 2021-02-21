@@ -24,6 +24,6 @@ app.use(bodyParser.json());
 app.use("/user", newUser);
 app.use("/transfer", transfer);
 
-app.listen(3001, () => {
+app.listen(process.env.PORT, process.env.IP, () => {
     console.log("Server listening on port 3001");
 });
